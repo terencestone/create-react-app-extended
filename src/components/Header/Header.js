@@ -19,6 +19,7 @@ export class HeaderComponent extends React.Component {
 
   render() {
     const { message } = this.props.testSaga
+    console.log(message)
 
     return (
       <div>

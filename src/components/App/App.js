@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Routes from './routes'
-
-import './App.css'
+import Routes from '../../routes'
+import styles from './style.scss'
+import CssModules from 'react-css-modules'
 
 class App extends Component {
   static propTypes = {
@@ -13,11 +13,11 @@ class App extends Component {
     this.props.init()
 
     return (
-      <div className="App">
+      <div styleName="App">
         <Routes />
       </div>
     )
   }
 }
 
-export default App
+export default CssModules(App, styles)
