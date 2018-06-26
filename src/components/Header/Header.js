@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import styles from './style.scss'
+import CssModules from 'react-css-modules'
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar'
 
-export default class HeaderComponent extends React.Component {
+class HeaderComponent extends React.Component {
   static propTypes = {
     testSaga: PropTypes.object
   }
@@ -17,9 +18,13 @@ export default class HeaderComponent extends React.Component {
         <Toolbar>
           <ToolbarGroup>
             <div>{`${process.env.REACT_APP_NAME}-v${process.env.REACT_APP_VERSION}`}</div>
+            <button styleName='button'><span styleName='inside'>Vanity Button</span></button>
+            <div styleName='inside'>Outside of button</div>
           </ToolbarGroup>
         </Toolbar>
       </div>
     )
   }
 }
+
+export default CssModules(HeaderComponent, styles)
