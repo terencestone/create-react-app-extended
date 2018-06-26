@@ -190,6 +190,16 @@ module.exports = {
               },
             ],
           },
+          // SASS loader
+          {
+            test: /\.scss$/,
+            loaders: [
+                'style',
+                'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+                'resolve-url',
+                'sass'
+            ]
+          },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.
