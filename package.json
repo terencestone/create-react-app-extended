@@ -70,6 +70,9 @@
     "@storybook/addon-actions": "^3.3.15",
     "@storybook/addon-console": "^1.0.0",
     "@storybook/react": "^3.3.15",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react-test-renderer": "^16.4.1",
     "storybook-addon-material-ui": "^0.8.2"
   },
   "scripts": {
@@ -83,7 +86,8 @@
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/src/setupTests.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
