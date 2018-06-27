@@ -1,15 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App'
-import './index.css'
+import App from '../App'
+// import './index.css'
+import './style.scss'
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 
-import reducers from './reducers'
+import reducers from '../../reducers'
 import createSagaMiddleware from 'redux-saga'
 
-import sagas from './sagas'
+import sagas from '../../sagas'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin'
